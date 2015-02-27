@@ -1,0 +1,18 @@
+body {
+  font-family: Georgia, Times, serif;
+  font-size: 100%;
+}
+
+a,
+a:link {
+  color: #3743c8;
+}
+a:link:hover {
+  color: #2cc838;
+}
+a:visited {
+  color: #2cc838;
+}
+a:link {
+  color: #3743c8;
+}
