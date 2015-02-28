@@ -1,0 +1,4 @@
+<?
+function beach_preprocess_page(&$variables) {
+  $variables['legal'] = 'Nobody copy me.';
+ }

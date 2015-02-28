@@ -2,7 +2,18 @@ body {
   font-family: Georgia, Times, serif;
   font-size: 100%;
 }
-
+header img {
+  width: 10%;
+}
+.breadlogo {
+  height: 10px;
+  width: 10px;
+}
+nav,
+ol,
+li {
+  display: inline;
+}
 a,
 a:link {
   color: #3743c8;
