@@ -33,7 +33,7 @@ regions:
 
 # Override Stylesheets from Core or Modules
 stylesheets-override:
-  - global-styling/views.module.css
+  - global-styling/css/views.module.css
 
 # Remove Stylesheets from Core or Modules
 stylesheets-remove:
