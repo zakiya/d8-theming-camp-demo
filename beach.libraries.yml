@@ -6,3 +6,5 @@ global-styling:
       global-styling/css/print.css: { media: print }
   js:
     global-styling/js/scripts.js: {}
+  dependencies:
+    - core/jquery
