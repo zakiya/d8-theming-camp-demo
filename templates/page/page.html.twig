@@ -25,9 +25,6 @@
  * - site_slogan: The slogan of the site. This is empty when displaying the site
  *   slogan has been disabled in theme settings.
  *
- * Navigation:
- * - breadcrumb: The breadcrumb trail for the current page.
- *
  * Page content (in order of occurrence in the default page.html.twig):
  * - title_prefix: Additional output populated by modules, intended to be
  *   displayed in front of the main title tag that appears in the template.
@@ -49,11 +46,13 @@
  * - page.primary_menu: Items for the primary menu region.
  * - page.secondary_menu: Items for the secondary menu region.
  * - page.highlighted: Items for the highlighted content region.
+ * - page.messages: Status messages block can be placed in messages region.
  * - page.help: Dynamic help text, mostly for admin pages.
  * - page.content: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
  * - page.footer: Items for the footer region.
+ * - page.breadcrumb: Items for the breadcrumb region.
  *
  * @see template_preprocess_page()
  * @see html.html.twig
@@ -64,32 +63,35 @@
 <div class="layout-container">
 
   <header role="banner">
-    {% if logo %}
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-      </a>
-    {% endif %}
+    {%  block logo_section %}
+      {% if logo %}
+        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+        </a>
+      {% endif %}
 
-    {% if site_name or site_slogan %}
-      <div class="name-and-slogan">
-      {#<pre>{{ dump() }}</pre>#}
 
-        {# Use h1 when the content title is empty #}
-        {% if title %}
-          <strong class="site-name">
-            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-          </strong>
-        {% else %}
-          <h3 class="site-name">
-            <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-          </h3>
-        {% endif %}
+      {% if site_name or site_slogan %}
+        <div class="name-and-slogan">
 
-        {% if site_slogan %}
-          <div class="site-slogan">{{ site_slogan }}</div>
-        {% endif %}
-      </div>{# ./name-and-slogan #}
-    {% endif %}
+         {# Use h1 when the content title is empty #}
+          {% if title %}
+            <strong class="site-name">
+              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+            </strong>
+          {% else %}
+            <h1 class="site-name">
+              <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+            </h1>
+          {% endif %}
+
+          {% if site_slogan %}
+            <div class="site-slogan">{{ site_slogan }}</div>
+          {% endif %}
+        </div>{# ./name-and-slogan #}
+      {% endif %}
+
+    {%  endblock logo_section %}
 
     {{ page.header }}
   </header>
@@ -97,11 +99,9 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
-  {% block breadcrumb %}
-    {{ breadcrumb }}
-  {% endblock %}
+  {{ page.breadcrumb }}
 
-  {{ messages }}
+  {{ page.messages }}
 
   {{ page.help }}
 
@@ -147,5 +147,3 @@
   {% endif %}
 
 </div>{# /.layout-container #}
-
-{{ legal|t }}

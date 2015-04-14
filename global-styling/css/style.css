@@ -1,14 +1,13 @@
 body {
-  font-family: Georgia, Times, serif;
+  color: #2c2c2c;
+  font-family: Helvetica, Arial, serif;
   font-size: 100%;
+  line-height: 1.2;
 }
 header img {
   width: 10%;
 }
-.breadlogo {
-  height: 10px;
-  width: 10px;
-}
+
 nav,
 ol,
 li {
@@ -17,13 +16,59 @@ li {
 a,
 a:link {
   color: #3743c8;
+  text-decoration: none;
 }
 a:link:hover {
-  color: #2cc838;
+  color: #418ac8;
+  text-decoration: underline;
 }
 a:visited {
-  color: #2cc838;
+  color: #3743c8;
 }
-a:link {
+a:active {
+  color: #3743c8;
+}
+
+/* Logo */
+.logo-link {
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+.logo-link,
+.logo-link:link {
+  color: white;
+}
+.logo-link:hover {
+  color: #f1e30a;
+}
+.logo-link:visited {
+  color: white;
+}
+.logo-link:active {
+  color: white;
+}
+
+/* Breadcrumbs */
+#block-beach-breadcrumbs {
+  background: #d5f5f5;
+  font-size: .9em;
+  margin: 10px 0;
+  padding: 5px 7px 5px 5px;
+}
+#block-beach-breadcrumbs ol {
+  padding-left: 0;
+}
+#block-beach-breadcrumbs a,
+#block-beach-breadcrumbs a:link {
+  color: #3743c8;
+}
+#block-beach-breadcrumbs a:link:hover {
+  color: #418ac8;
+}
+#block-beach-breadcrumbs a:visited {
+  color: #418ac8;
+}
+#block-beach-breadcrumbs a:link {
   color: #3743c8;
 }
