@@ -5,7 +5,7 @@ name: Beach theme
 type: theme
 
 # Short Description
-description: 'Drupal 8 theming demo for SANDCamp 2015'
+description: 'Drupal 8 theming demo for SANDCamp 2016'
 
 # Drupal Version
 core: 8.x
