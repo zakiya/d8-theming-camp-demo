@@ -13,16 +13,6 @@ core: 8.x
 # Path to screenshot
 screenshot: images/screenshot.png
 
-# Features
-features:
-  - logo
-  - name
-  - slogan
-  - node_user_picture
-  - comment_user_picture
-  - comment_user_verification
-  - favicon
-
 # Regions
 regions:
   header: Header
