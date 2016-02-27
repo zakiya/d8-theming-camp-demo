@@ -34,4 +34,6 @@ stylesheets-remove:
   - core/modules/system/css/components/fieldgroup.module.css
   - '@classy/css/components/breadcrumb.css'
 
-
+# Make modifications to existing libraries
+libraries-override:
+  core/domready: beach/domready

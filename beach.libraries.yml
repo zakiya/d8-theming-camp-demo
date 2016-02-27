@@ -8,3 +8,10 @@ global-styling:
     global-styling/js/scripts.js: {}
   dependencies:
     - core/jquery
+
+domready:
+  version: 1.x
+  css:
+    theme:
+      domready/domready.css: {}
+
