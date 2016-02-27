@@ -4,6 +4,9 @@ name: Beach theme
 # Declare 'theme' to distiguish from 'module'
 type: theme
 
+# Declare base theme
+base theme: classy
+
 # Short Description
 description: 'Drupal 8 theming demo for SANDCamp 2016'
 
@@ -16,19 +19,19 @@ screenshot: images/screenshot.png
 # Regions
 regions:
   header: Header
+  breadcrumb: Breadcrumb
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_first: 'Sidebar Second'
   footer: Footer
 
-# Override Stylesheets from Core or Modules
-stylesheets-override:
-  - global-styling/css/views.module.css
+# Declare New Library
+libraries:
+  - beach/global-styling
 
 # Remove Stylesheets from Core or Modules
 stylesheets-remove:
-  - normalize.css
+  - core/modules/system/css/components/fieldgroup.module.css
+  - '@classy/css/components/breadcrumb.css'
 
-# Define Librar(ies)
-libraries:
-  - beach/global-styling
+

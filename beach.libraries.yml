@@ -2,7 +2,7 @@ global-styling:
   version: 1.x
   css:
     theme:
-      global-styling/css/style.css: { media: all }
+      global-styling/css/style.css: {}
       global-styling/css/print.css: { media: print }
   js:
     global-styling/js/scripts.js: {}
